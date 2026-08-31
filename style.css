@@ -1,0 +1,1076 @@
+/* =========================================================
+   [BOT_NAME] — Legal Pages
+   Castle Cartoon / Warm Orange Theme
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+    --orange: #f47b20;
+    --orange-dark: #c65313;
+    --orange-light: #ffad4d;
+
+    --red: #a83b22;
+    --red-dark: #762818;
+
+    --cream: #fff7e8;
+    --cream-dark: #f7e7ca;
+
+    --brown: #4a281d;
+    --brown-light: #704333;
+
+    --gold: #f5bd4f;
+
+    --white: #ffffff;
+
+    --shadow: 0 14px 35px rgba(73, 35, 18, 0.14);
+
+    --radius: 20px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fff4d9 0%,
+            #fff8ed 35%,
+            #f9ead3 100%
+        );
+
+    color: var(--brown);
+
+    font-family: "Nunito", sans-serif;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.castle-bg {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -10;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            #8e351f 0%,
+            #c7551c 28%,
+            #f47b20 55%,
+            #ffb354 100%
+        );
+}
+
+.castle-bg::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -120px;
+    left: -10%;
+
+    width: 120%;
+    height: 250px;
+
+    background: #5a2c20;
+
+    border-radius: 50% 50% 0 0;
+}
+
+
+/* =========================================================
+   MOON
+   ========================================================= */
+
+.moon {
+    position: absolute;
+
+    top: 65px;
+    right: 10%;
+
+    width: 85px;
+    height: 85px;
+
+    background: #ffe4a5;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 35px rgba(255, 222, 153, 0.8);
+}
+
+
+/* =========================================================
+   CLOUDS
+   ========================================================= */
+
+.cloud {
+    position: absolute;
+
+    width: 180px;
+    height: 50px;
+
+    background: rgba(255, 231, 193, 0.18);
+
+    border-radius: 50px;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+
+    position: absolute;
+
+    background: inherit;
+
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 75px;
+    height: 75px;
+
+    left: 30px;
+    bottom: 0;
+}
+
+.cloud::after {
+    width: 60px;
+    height: 60px;
+
+    right: 30px;
+    bottom: 0;
+}
+
+.cloud-1 {
+    top: 100px;
+    left: 5%;
+
+    transform: scale(0.8);
+}
+
+.cloud-2 {
+    top: 180px;
+    right: 3%;
+
+    transform: scale(0.65);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 75px 20px 120px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "🏰";
+
+    position: absolute;
+
+    left: -30px;
+    bottom: -60px;
+
+    font-size: 270px;
+
+    opacity: 0.08;
+
+    transform: rotate(-4deg);
+}
+
+.hero::after {
+    content: "🏰";
+
+    position: absolute;
+
+    right: -30px;
+    bottom: -60px;
+
+    font-size: 270px;
+
+    opacity: 0.08;
+
+    transform: rotate(4deg);
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+.castle-icon {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    width: 105px;
+    height: 105px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: var(--cream);
+
+    border: 7px solid var(--gold);
+
+    border-radius: 30px;
+
+    font-size: 55px;
+
+    box-shadow:
+        0 10px 0 rgba(94, 40, 20, 0.3),
+        0 20px 40px rgba(70, 28, 12, 0.25);
+
+    transform: rotate(-3deg);
+}
+
+.badge {
+    display: inline-block;
+
+    margin-bottom: 12px;
+    padding: 6px 16px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 100px;
+
+    color: #fff5dc;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-bottom: 0;
+
+    color: white;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(48px, 8vw, 82px);
+
+    font-weight: 800;
+
+    line-height: 0.95;
+
+    text-shadow:
+        0 5px 0 var(--red-dark),
+        0 10px 20px rgba(60, 20, 10, 0.25);
+}
+
+.hero-subtitle {
+    margin-top: 12px;
+
+    color: #ffe4aa;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin: 15px auto 0;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navbar {
+    position: relative;
+
+    z-index: 20;
+
+    margin-top: -50px;
+}
+
+.nav-container {
+    width: min(920px, calc(100% - 30px));
+
+    margin: auto;
+
+    padding: 10px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    background: var(--cream);
+
+    border: 3px solid var(--cream-dark);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+}
+
+.nav-link {
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    color: var(--brown);
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.nav-link:hover {
+    background: #ffe2bc;
+
+    color: var(--orange-dark);
+
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: var(--orange);
+
+    color: white;
+
+    box-shadow:
+        0 4px 0 var(--orange-dark);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.container {
+    position: relative;
+
+    width: min(950px, calc(100% - 30px));
+
+    margin: 55px auto 100px;
+}
+
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.notice {
+    display: flex;
+
+    gap: 18px;
+
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+
+    padding: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #fff5db,
+        #ffe8bf
+    );
+
+    border: 2px solid #f4c778;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.notice-icon {
+    flex-shrink: 0;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--orange);
+
+    border-radius: 15px;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 4px 0 var(--orange-dark);
+}
+
+.notice strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--red-dark);
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 21px;
+}
+
+.notice p {
+    color: var(--brown-light);
+
+    font-size: 14px;
+}
+
+.privacy-notice {
+    background: linear-gradient(
+        135deg,
+        #fff3df,
+        #ffe4c2
+    );
+}
+
+
+/* =========================================================
+   LEGAL CARDS
+   ========================================================= */
+
+.legal-card {
+    position: relative;
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 22px;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 2px solid #f0dfc7;
+
+    border-radius: var(--radius);
+
+    box-shadow: 0 8px 25px rgba(83, 42, 20, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.legal-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 14px 35px rgba(83, 42, 20, 0.12);
+}
+
+.section-number {
+    flex-shrink: 0;
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--orange);
+
+    border-radius: 15px;
+
+    color: white;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 4px 0 var(--orange-dark);
+}
+
+.section-content {
+    flex: 1;
+}
+
+.section-content h2 {
+    margin-bottom: 12px;
+
+    color: var(--red-dark);
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.section-content p {
+    margin-bottom: 12px;
+
+    color: var(--brown-light);
+
+    font-size: 15px;
+}
+
+.section-content p:last-child {
+    margin-bottom: 0;
+}
+
+.section-content strong {
+    color: var(--red-dark);
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+.section-content ul {
+    margin: 15px 0;
+
+    padding-left: 25px;
+}
+
+.section-content li {
+    margin-bottom: 8px;
+
+    color: var(--brown-light);
+
+    font-size: 15px;
+}
+
+.section-content li::marker {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   TIP / WARNING BOX
+   ========================================================= */
+
+.tip-box,
+.warning-box {
+    margin-top: 20px;
+
+    padding: 18px 20px;
+
+    border-radius: 14px;
+}
+
+.tip-box {
+    background: #fff4dc;
+
+    border-left: 5px solid var(--orange);
+}
+
+.warning-box {
+    background: #fff0df;
+
+    border-left: 5px solid var(--red);
+}
+
+.tip-box strong,
+.warning-box strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--red-dark);
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 17px;
+}
+
+.tip-box p,
+.warning-box p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+    padding: 17px;
+
+    background: #fff5e6;
+
+    border: 2px solid #f4dfc2;
+
+    border-radius: 14px;
+}
+
+.contact-card > span {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--orange);
+
+    border-radius: 12px;
+
+    font-size: 21px;
+}
+
+.contact-card strong {
+    display: block;
+
+    font-size: 15px;
+}
+
+.contact-card p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   DATA GRID
+   ========================================================= */
+
+.data-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin: 20px 0;
+}
+
+.data-item {
+    padding: 20px;
+
+    background: #fff8ed;
+
+    border: 2px solid #f1dfc5;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.data-item:hover {
+    transform: translateY(-3px);
+
+    border-color: #f4b15c;
+}
+
+.data-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    background: #ffe1b3;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+.data-item h3 {
+    margin-bottom: 5px;
+
+    color: var(--red-dark);
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 18px;
+}
+
+.data-item p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RETENTION
+   ========================================================= */
+
+.retention-card {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.retention-card > div {
+    padding: 17px;
+
+    background: #fff6e8;
+
+    border: 2px solid #f2dfc3;
+
+    border-radius: 14px;
+}
+
+.retention-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--brown-light);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.retention-card strong {
+    font-size: 14px;
+}
+
+.small-text {
+    margin-top: 12px !important;
+
+    color: #927463 !important;
+
+    font-size: 12px !important;
+}
+
+
+/* =========================================================
+   LAST UPDATE
+   ========================================================= */
+
+.last-update {
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: #876a59;
+
+    font-size: 13px;
+}
+
+.last-update strong {
+    color: var(--red-dark);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    position: relative;
+
+    padding: 60px 20px 45px;
+
+    background: #4b241b;
+
+    color: #fce8cb;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+footer::before {
+    content: "";
+
+    position: absolute;
+
+    top: -50px;
+    left: -5%;
+
+    width: 110%;
+    height: 100px;
+
+    background: #fff8ed;
+
+    border-radius: 50%;
+}
+
+.footer-castle {
+    position: relative;
+
+    margin-bottom: 8px;
+
+    font-size: 42px;
+}
+
+footer h3 {
+    color: #ffd38a;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 28px;
+}
+
+footer > p {
+    margin-top: 3px;
+
+    color: #dcbca1;
+
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: #ffbd67;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+
+    text-decoration: underline;
+}
+
+.footer-links span {
+    color: #89604d;
+}
+
+.copyright {
+    margin-top: 22px !important;
+
+    color: #a98570 !important;
+
+    font-size: 12px !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: 390px;
+
+        padding-top: 55px;
+        padding-bottom: 100px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-subtitle {
+        font-size: 25px;
+    }
+
+    .castle-icon {
+        width: 85px;
+        height: 85px;
+
+        font-size: 45px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    .legal-card {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 23px;
+    }
+
+    .section-number {
+        width: 47px;
+        height: 47px;
+
+        font-size: 16px;
+    }
+
+    .section-content h2 {
+        font-size: 24px;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .retention-card {
+        grid-template-columns: 1fr;
+    }
+
+    .notice {
+        flex-direction: column;
+    }
+
+    .container {
+        width: min(100% - 20px, 950px);
+
+        margin-top: 40px;
+    }
+
+    .cloud {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .legal-card {
+        padding: 20px;
+    }
+
+    .section-content p,
+    .section-content li {
+        font-size: 14px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .footer-links span {
+        display: none;
+    }
+}
